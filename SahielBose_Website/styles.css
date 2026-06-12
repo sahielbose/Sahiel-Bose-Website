@@ -441,7 +441,7 @@ main { padding-top: var(--nav-h); }
 .section-title {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(56px, 7vw, 120px);
+  font-size: clamp(62px, 9.5vw, 150px);
   line-height: 0.95;
   letter-spacing: -0.03em;
 }
@@ -2325,7 +2325,7 @@ html[data-layout="compact"] .proj-row-body { flex: 1; display: flex; flex-direct
 /* top of page: cut the air */
 .hero { padding: 12px 40px 0; }
 .hero-eyebrow { margin-bottom: 16px; }
-.mega { margin-bottom: 20px; font-size: clamp(56px, 8vw, 120px); }
+.mega { margin-bottom: 20px; font-size: clamp(62px, 9.5vw, 150px); }
 .hero-content { padding-bottom: 0; }
 .section { padding: 18px 40px; }
 .section-head { margin-bottom: 12px; }
