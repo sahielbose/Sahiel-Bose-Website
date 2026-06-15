@@ -1284,7 +1284,7 @@ main { padding-top: var(--nav-h); }
    MOTION SYSTEM  (tuned per Emil Kowalski's design-eng principles)
    ============================================================ */
 :root {
-  /* Strong custom curves — built-in easings lack punch */
+  /* Strong custom curves; built-in easings lack punch */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-editorial: cubic-bezier(0.23, 1, 0.32, 1);
@@ -1488,7 +1488,7 @@ main { position: relative; z-index: 1; }
   clip-path: inset(0 0 100% 0);
 }
 
-/* section dash — kept for potential reuse */
+/* section dash, kept for potential reuse */
 .section-dash {
   display: block;
   width: 30px;
@@ -1617,7 +1617,7 @@ main { position: relative; z-index: 1; }
 }
 
 /* ============================================================
-   DEPTH RAMP — the page descends from bright blue to deep navy.
+   DEPTH RAMP: the page descends from bright blue to deep navy.
    Section identity elements step down a shared color ramp;
    interactive elements keep the bright accent. Toggle: Tweaks.
    ============================================================ */

@@ -17,7 +17,7 @@ const DATA = {
       company: "Optivia",
       role: "Co-Founder",
       location: "San Francisco, CA",
-      period: "Mar 2026 – Present",
+      period: "Mar 2026 - Present",
       kind: "Founder · Patent pending",
       short: "Architecting an enterprise AI engineering orchestration platform (patent pending).",
       bullets: [
@@ -30,7 +30,7 @@ const DATA = {
       company: "OpenSwarm",
       role: "Contributor",
       location: "San Francisco, CA",
-      period: "May 2026 – Present",
+      period: "May 2026 - Present",
       kind: "Engineering",
       short: "Building OpenSwarm's agent library, the interactive marketing site, and a full-stack LinkedIn-gated access flow.",
       bullets: [
@@ -43,7 +43,7 @@ const DATA = {
       company: "ThinkNeuro LLC",
       role: "Neurotechnology & Machine Learning Researcher",
       location: "Remote",
-      period: "Nov 2024 – Present",
+      period: "Nov 2024 - Present",
       kind: "Engineering",
       short: "Building a skin-adhered overdose-detection patch: embedded sensors, on-device ML, and the alert app.",
       bullets: [
@@ -56,7 +56,7 @@ const DATA = {
       company: "UC Santa Cruz, AIEA Lab",
       role: "AI Researcher",
       location: "Remote",
-      period: "Oct 2024 – Apr 2026",
+      period: "Oct 2024 - Apr 2026",
       kind: "Research",
       short: "Researching logical reasoning in LLMs and methods to improve problem-solving.",
       bullets: [
@@ -69,7 +69,7 @@ const DATA = {
       company: "UC Riverside Research Lab",
       role: "Machine Learning Researcher",
       location: "Remote",
-      period: "May 2025 – Jan 2026",
+      period: "May 2025 - Jan 2026",
       kind: "Research",
       short: "GNN-based traffic congestion hotspot detection across large-scale road networks.",
       bullets: [
@@ -147,7 +147,7 @@ const DATA = {
     {
       title: "SignSpeak",
       subtitle: "Computer Vision · PyTorch · Edge",
-      period: "Oct '24 – Mar '25",
+      period: "Oct '24 - Mar '25",
       status: "2nd · ACSEF 2025",
       description:
         "A low-cost, wearable ASL translator: a Raspberry Pi device that translates sign language into speech while converting spoken replies into on-screen text, enabling two-way, hands-free conversation between Deaf and hearing users.",
@@ -190,7 +190,7 @@ function useInView(options = {}) {
   return [ref, inView];
 }
 
-// Scroll-driven parallax — moves element relative to its distance from viewport center.
+// Scroll-driven parallax - moves element relative to its distance from viewport center.
 function useParallax(speed = 0.12) {
   const ref = useRef(null);
   useEffect(() => {
@@ -212,7 +212,7 @@ function useParallax(speed = 0.12) {
   return ref;
 }
 
-// Magnetic pull toward the cursor + press-scale feedback — for buttons.
+// Magnetic pull toward the cursor + press-scale feedback - for buttons.
 function useMagnetic(strength = 0.35) {
   const ref = useRef(null);
   useEffect(() => {
@@ -245,7 +245,7 @@ function useMagnetic(strength = 0.35) {
   return ref;
 }
 
-// Subtle 3D tilt toward the cursor — for cards.
+// Subtle 3D tilt toward the cursor - for cards.
 function useTilt(max = 5) {
   const ref = useRef(null);
   useEffect(() => {
@@ -269,7 +269,7 @@ function useActiveSection(ids) {
   const [active, setActive] = useState(ids[0]);
   useEffect(() => {
     const onScroll = () => {
-      // At (or within a few px of) the bottom, the last section wins —
+      // At (or within a few px of) the bottom, the last section wins -
       // short final sections can never cross the threshold otherwise.
       const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
       if (atBottom) { setActive(ids[ids.length - 1]); return; }
@@ -321,7 +321,7 @@ function Reveal({ children, delay = 0, as: Tag = 'div', className = '', style = 
   );
 }
 
-// Per-character rise from behind a mask — used for the hero name. Plays on mount.
+// Per-character rise from behind a mask - used for the hero name. Plays on mount.
 function AnimChars({ text, className = '', startDelay = 0, stagger = 0.035 }) {
   return (
     <span className={`anim-word ${className}`} aria-label={text}>
@@ -332,7 +332,7 @@ function AnimChars({ text, className = '', startDelay = 0, stagger = 0.035 }) {
   );
 }
 
-// Masked line that slides up into view when scrolled to — editorial heading reveal.
+// Masked line that slides up into view when scrolled to - editorial heading reveal.
 function LineReveal({ children, className = '', delay = 0 }) {
   const [ref, inView] = useInView();
   return (
@@ -350,7 +350,7 @@ function LineReveal({ children, className = '', delay = 0 }) {
   );
 }
 
-// Magnetic anchor — pulls toward the cursor.
+// Magnetic anchor - pulls toward the cursor.
 function MagneticLink({ children, ...props }) {
   const ref = useMagnetic(0.4);
   return <a ref={ref} {...props}>{children}</a>;
@@ -386,7 +386,7 @@ function SectionHead({ num, title }) {
   );
 }
 
-// Drifting atmospheric glows tied to scroll depth — connects sections into one space.
+// Drifting atmospheric glows tied to scroll depth - connects sections into one space.
 function DepthBackdrop() {
   const ref = useRef(null);
   useEffect(() => {
@@ -641,7 +641,7 @@ function Education() {
               </div>
               <div className="ucla-years">
                 <div className="year-big">2026</div>
-                <div className="year-dash">–</div>
+                <div className="year-dash">-</div>
                 <div className="year-big">2030</div>
               </div>
             </div>
@@ -716,7 +716,7 @@ function XpEntry({ x, i }) {
 // ---------- PROJECTS ----------
 // Editorial rows, newest first. Each row: art panel on one side (alternating),
 // deep technical writeup on the other. Reveal: the art blooms in from its side
-// while the text lines cascade up — intentionally different from the
+// while the text lines cascade up - intentionally different from the
 // experience timeline.
 function Projects() {
   return (

@@ -18,7 +18,7 @@ const DATA = {
     company: "Optivia",
     role: "Co-Founder",
     location: "San Francisco, CA",
-    period: "Mar 2026 – Present",
+    period: "Mar 2026 - Present",
     kind: "Founder · Patent pending",
     short: "Architecting an enterprise AI engineering orchestration platform (patent pending).",
     bullets: ["Primary architect of a B2B SaaS platform that turns enterprise software initiatives into dependency-aware human-agent execution graphs, then generates specialized AI agent fleets to execute the AI-suited nodes (patent pending).", "Designed the intelligence layer behind it: five-signal work-node scoring, human/AI assignment, critical-path scheduling, cost-aware model routing, and per-agent reflection gates that stop hallucinations from propagating; lead author on the research paper."],
@@ -27,7 +27,7 @@ const DATA = {
     company: "OpenSwarm",
     role: "Contributor",
     location: "San Francisco, CA",
-    period: "May 2026 – Present",
+    period: "May 2026 - Present",
     kind: "Engineering",
     short: "Building OpenSwarm's agent library, the interactive marketing site, and a full-stack LinkedIn-gated access flow.",
     bullets: ["Built the agent data layer for this local-first orchestrator: MCP server connectivity plus a swappable database with two CRM integrations (Admin and User), letting agents read and write structured data across external services.", "Rebuilt the landing page into an interactive site in custom anime.js, and shipped a LinkedIn-gated access flow on FastAPI and React, with a five-outcome verification state machine and an authenticated admin panel."],
@@ -36,7 +36,7 @@ const DATA = {
     company: "ThinkNeuro LLC",
     role: "Neurotechnology & Machine Learning Researcher",
     location: "Remote",
-    period: "Nov 2024 – Present",
+    period: "Nov 2024 - Present",
     kind: "Engineering",
     short: "Building a skin-adhered overdose-detection patch: embedded sensors, on-device ML, and the alert app.",
     bullets: ["Building a skin-adhered overdose-detection patch on an Arduino Nano ESP32, wiring GSR, pulse-oximeter, and accelerometer sensors into an on-device GRU classifier that catches the biphasic overdose signature in real time (patent in progress).", "Engineered the model features, ran FMEA risk analysis across the whole device, built the React Native app that sends live alerts to caregivers and first responders, and am co-authoring an academic paper on overdose detection."],
@@ -45,7 +45,7 @@ const DATA = {
     company: "UC Santa Cruz, AIEA Lab",
     role: "AI Researcher",
     location: "Remote",
-    period: "Oct 2024 – Apr 2026",
+    period: "Oct 2024 - Apr 2026",
     kind: "Research",
     short: "Researching logical reasoning in LLMs and methods to improve problem-solving.",
     bullets: ["Completed a 10-month research onboarding in LLM logic and reasoning, working through symbolic reasoning, logical inference, and AI explainability across Python and Prolog before joining active research.", "Built natural-language-to-Prolog pipelines through SWI-Prolog and a from-scratch backward-chaining inference engine, and support ProSLM, the lab's logic-augmented LLM platform."],
@@ -54,7 +54,7 @@ const DATA = {
     company: "UC Riverside Research Lab",
     role: "Machine Learning Researcher",
     location: "Remote",
-    period: "May 2025 – Jan 2026",
+    period: "May 2025 - Jan 2026",
     kind: "Research",
     short: "GNN-based traffic congestion hotspot detection across large-scale road networks.",
     bullets: ["Assist a Ph.D. researcher on GNN-based traffic-congestion-hotspot detection across large-scale road networks, applying spatial analytics to heterogeneous, real-time geospatial data.", "Trained and benchmarked graph-sampling methods (GraphSAGE, GraphSAINT, ShadowGraph) and analyzed heterogeneous-graph architectures like HiGPT and GRAPES for congestion prediction."],
@@ -107,7 +107,7 @@ const DATA = {
   }, {
     title: "SignSpeak",
     subtitle: "Computer Vision · PyTorch · Edge",
-    period: "Oct '24 – Mar '25",
+    period: "Oct '24 - Mar '25",
     status: "2nd · ACSEF 2025",
     description: "A low-cost, wearable ASL translator: a Raspberry Pi device that translates sign language into speech while converting spoken replies into on-screen text, enabling two-way, hands-free conversation between Deaf and hearing users.",
     depth: ["Took 2nd place at ACSEF 2025: a fine-tuned MobileNetV2 CNN hits 95% validation accuracy on 36 static signs; a bidirectional LSTM and TCN reach 90% on dynamic gestures after augmenting under 500 clips into 14,000+ samples.", "Runs fully offline on a Raspberry Pi 4 via TorchScript and ONNX exports with sub-2-second inference, paired with Vosk speech-to-text for two-way conversation."],
@@ -151,7 +151,7 @@ function useInView(options = {}) {
   return [ref, inView];
 }
 
-// Scroll-driven parallax — moves element relative to its distance from viewport center.
+// Scroll-driven parallax - moves element relative to its distance from viewport center.
 function useParallax(speed = 0.12) {
   const ref = useRef(null);
   useEffect(() => {
@@ -183,7 +183,7 @@ function useParallax(speed = 0.12) {
   return ref;
 }
 
-// Magnetic pull toward the cursor + press-scale feedback — for buttons.
+// Magnetic pull toward the cursor + press-scale feedback - for buttons.
 function useMagnetic(strength = 0.35) {
   const ref = useRef(null);
   useEffect(() => {
@@ -229,7 +229,7 @@ function useMagnetic(strength = 0.35) {
   return ref;
 }
 
-// Subtle 3D tilt toward the cursor — for cards.
+// Subtle 3D tilt toward the cursor - for cards.
 function useTilt(max = 5) {
   const ref = useRef(null);
   useEffect(() => {
@@ -257,7 +257,7 @@ function useActiveSection(ids) {
   const [active, setActive] = useState(ids[0]);
   useEffect(() => {
     const onScroll = () => {
-      // At (or within a few px of) the bottom, the last section wins —
+      // At (or within a few px of) the bottom, the last section wins -
       // short final sections can never cross the threshold otherwise.
       const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
       if (atBottom) {
@@ -317,7 +317,7 @@ function Reveal({
   }, children);
 }
 
-// Per-character rise from behind a mask — used for the hero name. Plays on mount.
+// Per-character rise from behind a mask - used for the hero name. Plays on mount.
 function AnimChars({
   text,
   className = '',
@@ -336,7 +336,7 @@ function AnimChars({
   }, ch)));
 }
 
-// Masked line that slides up into view when scrolled to — editorial heading reveal.
+// Masked line that slides up into view when scrolled to - editorial heading reveal.
 function LineReveal({
   children,
   className = '',
@@ -355,7 +355,7 @@ function LineReveal({
   }, children));
 }
 
-// Magnetic anchor — pulls toward the cursor.
+// Magnetic anchor - pulls toward the cursor.
 function MagneticLink({
   children,
   ...props
@@ -405,7 +405,7 @@ function SectionHead({
   }, title)));
 }
 
-// Drifting atmospheric glows tied to scroll depth — connects sections into one space.
+// Drifting atmospheric glows tied to scroll depth - connects sections into one space.
 function DepthBackdrop() {
   const ref = useRef(null);
   useEffect(() => {
@@ -978,7 +978,7 @@ function XpEntry({
 // ---------- PROJECTS ----------
 // Editorial rows, newest first. Each row: art panel on one side (alternating),
 // deep technical writeup on the other. Reveal: the art blooms in from its side
-// while the text lines cascade up — intentionally different from the
+// while the text lines cascade up - intentionally different from the
 // experience timeline.
 function Projects() {
   return /*#__PURE__*/React.createElement("section", {
