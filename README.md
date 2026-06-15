@@ -1,93 +1,99 @@
-# Sahiel Bose's Website
+# Sahiel Bose Portfolio
 
-A personal website built and deployed by **Sahiel Bose**.
+Personal portfolio site for Sahiel Bose. Built as a single page React application, served as static files, and deployed on Vercel.
 
-**Live site:** [sahiel-bose.vercel.app](https://sahiel-bose.vercel.app/)
+Live site: https://sahiel-bose.vercel.app
 
----
+## Overview
 
-## About
+This repository contains the full source for my personal portfolio. The site presents my background, experience, projects, and skills on a single page, along with a downloadable resume. It is intentionally lightweight. There is no bundler or package manager: React is loaded from a CDN, the interface lives in a single component file, and the page is served as plain static assets.
 
-This is the source code for my personal website. Feel free to explore the code, and if you'd like to suggest changes or improvements, see the contributing section below.
+## Tech Stack
 
----
-
-## Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [Git](https://git-scm.com/)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/sahielbose/Sahiel-Bose-Website.git
-   cd Sahiel-Bose-Website
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view it locally.
-
----
+- React 18, loaded from a CDN with no build tooling required to run the site
+- Plain CSS with custom typography and an oklch based color system
+- A static HTML entry point
+- Deployed on Vercel
 
 ## Project Structure
 
 ```
 Sahiel-Bose-Website/
-├── SahielBose_Website/     # Main website source files
-│   ├── ...
 ├── README.md
+├── LICENSE
+└── SahielBose_Website/
+    ├── index.html             Entry point loaded by the browser
+    ├── app.jsx                React source, written in JSX
+    ├── app.compiled.js        Browser ready build that index.html loads
+    ├── styles.css             Site styles
+    ├── Deep Dive.html         Standalone supporting page
+    ├── SB Logo Options.html   Standalone logo reference page
+    ├── favicon.svg
+    ├── apple-touch-icon.png
+    └── assets/
+        ├── SahielBose_Resume.pdf
+        └── og-badge-light.png
 ```
 
----
+## Running Locally
 
-## Making Changes
+The site is fully static, so any static file server works. From the repository root:
 
-### Editing the Code
+```bash
+cd SahielBose_Website
+python3 -m http.server 3000
+```
 
-1. Fork the repository by clicking the **Fork** button at the top right of the GitHub page
-2. Clone your fork locally:
+Then open http://localhost:3000 in your browser.
+
+If you prefer Node, any static server works as well:
+
+```bash
+cd SahielBose_Website
+npx serve .
+```
+
+## Editing the Site
+
+The browser loads `app.compiled.js`, which is the compiled output of `app.jsx`. To change the content or layout:
+
+1. Edit `SahielBose_Website/app.jsx`. Most page content lives in the `DATA` object near the top of the file.
+2. Recompile the JSX into `app.compiled.js` so the browser picks up your changes. Any JSX to JavaScript compiler works. For example, with Babel:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Sahiel-Bose-Website.git
+   npx babel app.jsx --presets @babel/preset-react -o app.compiled.js
    ```
-3. Create a new branch for your changes:
+3. Reload the page to confirm the result.
+
+Styles live in `SahielBose_Website/styles.css`.
+
+## Contributing
+
+Suggestions and improvements are welcome.
+
+1. Fork the repository.
+2. Create a branch for your change:
    ```bash
    git checkout -b your-feature-branch
    ```
-4. Make your edits in the `SahielBose_Website/` folder
-5. Commit and push your changes:
+3. Make your edits inside the `SahielBose_Website/` directory.
+4. Commit and push:
    ```bash
    git add .
-   git commit -m "Describe your changes here"
+   git commit -m "Describe your change"
    git push origin your-feature-branch
    ```
-6. Open a **Pull Request** on GitHub so changes can be reviewed
+5. Open a pull request describing what you changed and why.
 
-### Suggesting Changes Without Coding
-
-If you'd like to suggest a change but don't want to edit the code yourself, open an [Issue](https://github.com/sahielbose/Sahiel-Bose-Website/issues) and describe what you'd like to see!
-
----
+If you would rather suggest a change without writing code, open an issue at https://github.com/sahielbose/Sahiel-Bose-Website/issues and describe what you have in mind.
 
 ## Deployment
 
-This site is deployed on **Vercel**. Any changes pushed to the `main` branch are automatically deployed to the live site.
+The site is deployed on Vercel. Changes merged into the `main` branch are deployed automatically to the live site.
 
----
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for the full text.
 
 ## Contact
 
-Have questions or want to get in touch? Visit the live site at [sahiel-bose.vercel.app](https://sahiel-bose.vercel.app/) for contact info.
+For contact details, visit the live site at https://sahiel-bose.vercel.app
